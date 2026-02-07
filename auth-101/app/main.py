@@ -8,7 +8,7 @@ and defines the startup and shutdown event handlers.
 """
 
 from fastapi import FastAPI
-from .database import database, engine, metadata
+from .db.database import database, engine, metadata
 from .routers import todos, users
 
 # Create all tables

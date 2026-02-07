@@ -13,8 +13,10 @@ It defines:
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, Boolean, ForeignKey
 from databases import Database
 
+from ..core.config import settings
+
 # Database configuration
-DATABASE_URL = "sqlite:///./test.db"
+DATABASE_URL = settings.DATABASE_URL
 database = Database(DATABASE_URL)
 metadata = MetaData()
 
